@@ -31,7 +31,7 @@ const UserSchema = mongoose.Schema({
   following: [],
   
 },
-{timeStamps: true}
+{timestamps: true}
 )
 const userModel=mongoose.model('users', UserSchema)
 export default userModel
