@@ -22,11 +22,12 @@ const UserSchema = mongoose.Schema({
     default: false
   },
   profilePicture: String,
-  coverImg: String,
+  coverPicture: String,
   livesIn: String,
   worksAt: String,
   relationship: String,
   about: String,
+  country: String,
   followers: [],
   following: [],
   
