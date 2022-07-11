@@ -7,6 +7,7 @@ import AuthRoute from './Routes/AuthRoute.js'
 import cors from 'cors'
 import uploadRoute from './Routes/UploadRoute.js'
 import PostRoute from './Routes/PostRoute.js'
+
 const app=express()
 
 app.use(express.static('public'))
