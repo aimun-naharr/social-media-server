@@ -9,7 +9,7 @@ import uploadRoute from './Routes/UploadRoute.js'
 import PostRoute from './Routes/PostRoute.js'
 
 const app=express()
-
+const port=process.env.PORT|| 5000
 app.use(express.static('public'))
 app.use('/images', express.static('images'))
 
@@ -24,7 +24,7 @@ dotenv.config()
 
 mongoose.connect(process.env.MONGO_DB, {
     useNewUrlParser:true, useUnifiedTopology: true
-}).then(()=>app.listen(process.env.PORT , ()=> console.log('listening'))).catch((error)=>console.log(error))
+}).then(()=>app.listen(process.env.PORT , ()=> console.log('listening', port))).catch((error)=>console.log(error))
 
 app.use('/auth', AuthRoute)
 app.use('/user', UserRoute)
